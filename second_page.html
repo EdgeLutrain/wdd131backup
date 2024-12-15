@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Guide to Tarkov</title>
+    <meta name="description" content="Helpful search tool to look up quests from Trader in Escape From Tarkov.">
+    <meta name="keywords" content="FPS, EFT, Escape, Tarkov, Surival, Quest, Search"/> 
+    <meta property="og:title" content="Quest Tool for Escape From Tarkov"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:description" content="Helpful search tool to look up quests from Trader in Escape From Tarkov."/>
+    <meta property="og:image" content="https://edgelutrain.github.io/wdd131/tarkovquest/image/the_guide_to_tarkov_logo.png"/>
+    <meta property="og:url" content="https://edgelutrain.github.io/wdd131/tarkovquest/home_page.html"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="author" content="Cameron"/>
+    <link rel="preload" href="styles.css" as="style"/>
+    <link rel="preload" href="test.js" as="script"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="taskhandler.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logoandtitle">
+            <h1>The Guide to Tarkov</h1>
+            <img src="image/the-guide-to-tarko-logo.png" alt="The Guide to Tarkov"> 
+        </div>
+
+        <nav class="navbar">
+            <a href="home_page.html" class="nav-button">Home</a>
+            <a href="second_page.html" class="nav-button">Search Quest</a>
+        </nav>
+    </header>
+        
+    <div id="tasks-container" class="container">
+        
+        <div class="filters">
+            <input type="text" id="search-input" placeholder="Search tasks..." />
+            <label>
+                <input type="checkbox" id="filter-kappa" />
+                Kappa Required
+            </label>
+            <label>
+                <input type="checkbox" id="filter-lightkeeper" />
+                Lightkeeper Required
+            </label>
+            <button id="search-button">Search</button>
+        </div>
+        <div><p>Searching for Kappa or Lightkeeper Required check the box and click search</p></div>
+        <div id="loading">Loading tasks...</div>
+        <div id="pagination" class="pagination-controls"></div>
+        
+        <div id="task-list" class="task-list"></div>
+        
+    </div>
+    
+    <footer class="footer">
+        <div class="disclosure">
+            <h2>Special Thanks to</h2>
+            <a href="https://tarkov.dev/">Tarkov.Dev</a>
+            <p>All Data is Sourced From Tarkov.Devs API. Please check them and out as open source project for Tarkov relate info!</p>
+            <p>We don't work with them, but we appericate them opening up the API for public use.</p>
+            <br>
+            <p>- 2024 -</p>
+            <br>
+            <p>Game content and materials are trademarks and copyrights of Battlestate Games and its licensors. All rights reserved.</p>
+
+        </div>
+    </footer>
+</body>
+</html>
